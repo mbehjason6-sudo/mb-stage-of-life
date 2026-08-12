@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+{% block body %}
+        <h3>Hello, 
+        {% if name %}
+        {{ name }}
+        {% else %}
+        Guest</h3>
+        {% endif %}
+        <p>You are {{ age }} years old</p>
+        <h3>stage: {{ stage }}</h3>
+
+        <br>
+        <a href="/">Go Back</a>
+{% endblock %}
