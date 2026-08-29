@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 {% block body %}
-
-        <h1>Welcome to MB "STAGE OF LIFE!"</hi>
+        <h1 class="display-5 fw-bold text-center text-primary">Welcome to MB "STAGE OF LIFE!"</h1>
+<p class="text-center text-muted fst-italic">Your journey begins here</p>
             <h5>Enter your name</h5>
         <form action="/home" method="post">
             <input autocomplete="off" autofocus name="name" placeholder="Name" type="text">
@@ -9,5 +9,4 @@
         <form action="/age" method="post">
             <input autocomplete="off" autofocus name="age" placeholder="Age" type="number">
         <button type="submit">Submit</button>
-        
-{% endblock %}
+        {% endblock %}

@@ -1,5 +1,6 @@
 
 from flask import Flask, render_template, request
+import os
  
 app = Flask(__name__)
 def  get_stage(age):
@@ -22,11 +23,9 @@ def  get_stage(age):
     else:
         return "Elder - The wisdom stage"
 
-
 @app.route("/")
 def index():
-    return render_template("index.html")
-
+     return render_template('index.html')
 
 @app.route("/home", methods=['POST'])
 def home():
@@ -37,4 +36,5 @@ def home():
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    port = int(os.environ.get("PORT", 10000))
+    app.run(host="0.0.0.0", port=port)

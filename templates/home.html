@@ -6,7 +6,12 @@
         {% else %}
         Guest</h3>
         {% endif %}
-        <p>You are {{ age }} years old</p>
+        <p>You are
+        {%if age %}
+        {{ age }} years old</p>
+        {% else %}
+        0  years old</p>
+        {% endif %}
         <h3>stage: {{ stage }}</h3>
 
         <br>
